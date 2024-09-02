@@ -31,10 +31,6 @@ class RootPage extends StatelessWidget {
         title: const Text('My App'),
       ),
       endDrawer: const MenuDrawer(),
-      routes: const [
-        HomeRoute(),
-        AboutRoute(),
-      ],
     );
   }
 }
@@ -51,6 +47,7 @@ class MenuDrawer extends StatelessWidget {
             title: const Text('Home'),
             onTap: () {
               AutoRouter.of(context).pushNamed('/');
+              // to close drawer
               Navigator.of(context).pop();
             },
           ),
@@ -58,6 +55,7 @@ class MenuDrawer extends StatelessWidget {
             title: const Text('About'),
             onTap: () {
               AutoRouter.of(context).pushNamed('/about');
+              // to close drawer
               Navigator.of(context).pop();
             },
           ),
@@ -78,7 +76,6 @@ class AppRouter extends RootStackRouter {
           children: [
             AutoRoute(path: '', page: HomeRoute.page),
             AutoRoute(path: 'about', page: AboutRoute.page),
-            // Add other routes here
           ],
         ),
       ];
