@@ -1,1 +1,1 @@
-![](https://github.com/Sameri11/nested_route_example/example.gif)
+![](https://github.com/Sameri11/nested_route_example/blob/main/example.gif)
